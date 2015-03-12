@@ -1,3 +1,4 @@
+<div style="margin-left: 30px; margin-top:30px;">
 <p>
   <strong>评论标题:</strong>
   <%= comment.commenter %>
@@ -6,10 +7,10 @@
 <p>
   <strong>评论内容:</strong>
   <%= comment.body %>
-<p>
+<button>
   <%= link_to '删除评论', [comment.article, comment],
               method: :delete,
               data: { confirm: 'Are you sure?' } %>
+</button>
 </p>
-
-</p>
+</div>
