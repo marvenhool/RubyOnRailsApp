@@ -1,5 +1,5 @@
-<div style="margin-top: 40px; margin-left: 20px" class="title"><h1>商品一览</h1></div>
-<div style="margin-top: 30px; margin-left:20px" class="blogcontentdiv">
+<div class="title"><h1>商品一览</h1></div>
+<div class="blogcontentdiv">
   <table class="blogtable">
     <thead>
     <tr>
@@ -13,7 +13,7 @@
     </tr>
     </thead>
     <tbody>
-    <% @products.each do |prod| %>
+    <% @prod.each do |prod| %>
         <tr>
           <td style="width: 4%;"><%= prod.id %></td>
           <td style="width: 20%;"><%= prod.name %></td>

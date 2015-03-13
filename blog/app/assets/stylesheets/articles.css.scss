@@ -7,9 +7,6 @@
 }*/
 
 
-body{
-  background-image: url("http://pds.exblog.jp/pds/1/200810/10/47/b0023047_6242477.jpg");
-}
 
 div#container {
   margin: 0 auto;
@@ -22,6 +19,7 @@ div#header {
 div#content {
   float: left;
   padding: 10px;
+  margin-bottom: 100px;
 }
 
 table.blogtable{
@@ -58,4 +56,13 @@ div.div1 {
 
 button#button3{
   margin-left: 10px;
+}
+
+.footer
+{
+  margin-top: 100px;
+  text-align:center;
+  clear:both;
+  line-height:24px;
+  padding-bottom:20px;
 }
