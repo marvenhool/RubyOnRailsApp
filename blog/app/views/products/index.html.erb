@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+  <style type="text/css">
+
+      table.blogtable{
+          padding: 0px;
+          width: 960px;
+          border: 1px;
+          margin: 10px 5px 3px 10px;;
+          border-collapse: collapse;
+      }
+      table.blogtable th{
+          padding-left: 10px;
+          height: 40px;
+          border: 1px solid #080808;
+          background-color: #31b0d5;
+      }
+      table.blogtable td{
+          height: 30px;
+          padding-left: 5px;
+          border: 1px solid #080808;
+          background-color: #5bc0de;
+      }
+  </style>
+</head>
+<body>
+<div style="margin-top: 40px; margin-left: 20px" class="title"><h1>商品一览</h1></div>
+<div style="margin-top: 30px; margin-left:20px" class="blogcontentdiv">
+  <table class="blogtable">
+    <thead>
+    <tr>
+      <th style="width: 4%;">商品编号</th>
+      <th style="width: 20%;">商品名</th>
+      <th style="width: 40%;">商品简介</th>
+      <th style="width: 10%;">价格</th>
+      <th style="width: 10%;">在库状态</th>
+      <th style="width: 6%;">剩余数量</th>
+      <th style="width: 10%;">贩售截止日期</th>
+    </tr>
+    </thead>
+    <tbody>
+    <% @prod.each do |prod| %>
+        <tr>
+          <td style="width: 4%;"><%= prod.id %></td>
+          <td style="width: 20%;"><%= prod.name %></td>
+          <td style="width: 40%;"><%= prod.describe %></td>
+          <td style="width: 10%;"><%= prod.price %></td>
+          <td style="width: 10%;"><%= prod.status %></td>
+          <td style="width: 6%;"><%= prod.count %></td>
+          <td style="width: 10%;"><%= prod.discountdl %></td>
+
+        </tr>
+    <% end %>
+    </tbody>
+  </table>
+</div>
+</body>
+</html>
