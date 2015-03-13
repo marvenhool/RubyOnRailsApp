@@ -1,7 +1,10 @@
 class ProductsController < ApplicationController
 
+  layout 'products'
+
+
   def index
-    @prod =Product.all()
+    @products =Product.all()
     render("products/index")
   end
 end
