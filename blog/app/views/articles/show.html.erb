@@ -1,34 +1,18 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/html">
-<head>
-  <style type="text/css">
-    div{
-        margin-top: 30px;
-        margin-left: 30px;
-    }
-  </style>
-</head>
-<body>
-
-<div style="margin-top: 70px;margin-left: 30px;">
+<div class="div1">
   <h2>标题:</h2>
   <%= @article.title %>
 </div>
 
-<div>
+<div class="div1">
   <h2>正文:</h2>
   <%= @article.text %>
 </div>
 
-<div><h4>评论</h4></div>
+<div class="div1"><h4>评论</h4></div>
 <%= render @article.comments %>
 
-<div style="margin-top: 70px;margin-left: 30px;"><h4>添加评论:</h4></div>
+<div class="div1"><h4>添加评论:</h4></div>
 <%= render "comments/form" %>
 
-<button style="margin-top: 10px;margin-left: 30px;"><%= link_to '返回', articles_path %></button>
-<button style="margin-top: 10px;margin-left: 30px;"><%= link_to '编辑博文', edit_article_path(@article) %></button>
-
-</body>
-</html>
+<button class="button1"><%= link_to '返回', articles_path %></button>
+<button class="button1"><%= link_to '编辑博文', edit_article_path(@article) %></button>
