@@ -13,6 +13,58 @@
  *= require bootstrap.min
  */
 
-body{
-    background-image: url("http://www.apoints.com/web/UploadFiles/200901/20090111224559582.jpg");
+
+.footer
+{
+    margin-top: 100px;
+    text-align:center;
+    clear:both;
+    line-height:24px;
+    padding-bottom:20px;
 }
+
+
+
+table.blogtable{
+    padding: 0px;
+    width: 960px;
+    border: 1px;
+    margin: 10px 5px 3px 10px;;
+    border-collapse: collapse;
+}
+
+table th{
+    padding-left: 10px;
+    height: 40px;
+    border: 1px solid #5bc0de;
+}
+
+table td{
+    height: 30px;
+    padding-left: 5px;
+    border: 1px solid #5bc0de;
+}
+
+button.button1 {
+    margin-left: 30px;
+    margin-top: 20px;
+}
+
+div.div1 {
+    margin-left: 30px;
+    margin-top: 20px;
+}
+
+button#button3{
+    margin-left: 10px;
+}
+
+.footer
+{
+    margin-top: 100px;
+    text-align:center;
+    clear:both;
+    line-height:24px;
+    padding-bottom:20px;
+}
+
