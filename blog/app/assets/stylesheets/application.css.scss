@@ -13,6 +13,9 @@
  *= require bootstrap.min
  */
 
+body{
+    background: image_url("background.jpg");
+}
 
 .footer
 {
@@ -36,13 +39,13 @@ table.blogtable{
 table th{
     padding-left: 10px;
     height: 40px;
-    border: 1px solid #5bc0de;
+    border: 1px solid #101010;
 }
 
 table td{
     height: 30px;
     padding-left: 5px;
-    border: 1px solid #5bc0de;
+    border: 1px solid #101010;
 }
 
 button.button1 {
