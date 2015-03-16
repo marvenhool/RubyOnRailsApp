@@ -26,6 +26,15 @@ body{
     padding-bottom:20px;
 }
 
+div.navbar-inner{
+  margin-top: 15px;
+}
+
+a.home{
+  color: #d0e9c6;
+  font-size: large;
+}
+
 
 
 table.blogtable{
@@ -61,13 +70,3 @@ div.div1 {
 button#button3{
     margin-left: 10px;
 }
-
-.footer
-{
-    margin-top: 100px;
-    text-align:center;
-    clear:both;
-    line-height:24px;
-    padding-bottom:20px;
-}
-
