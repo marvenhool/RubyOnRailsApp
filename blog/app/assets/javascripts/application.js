@@ -13,18 +13,3 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require jquery-ui
-//= require jquery.fileupload
-
-
-
-$(document).on('page:change', function() {
-    var options = {
-        success: showResponse
-    }
-    $('#new_attachment').ajaxForm(options);
-});
-
-function showResponse(responseText, statusText, xhr, $form) {
-    alert('status: ' + statusText + '\n\nresponseText: ' + responseText);
-}
