@@ -8,10 +8,11 @@ Rails.application.routes.draw do
   end
 
   #photo
+  match 'photos', to: 'photos#upload', via: [:get, :post]
+
   get 'photos' => 'photos#index'
   get 'photos/index' => 'photos#index'
   get 'photos/success' => 'photos#success'
-  match 'photos', to: 'photos#upload', via: [:get, :post]
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

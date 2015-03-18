@@ -59,6 +59,7 @@ class ArticlesController < ApplicationController
   #——————————————destroy the articles——————————end——————————
 
 
+  # Strong Parameters 只有title和text通过过滤允许更新
   private
   def article_params
     params.require(:article).permit(:title, :text)
