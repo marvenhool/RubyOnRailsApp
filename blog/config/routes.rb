@@ -6,21 +6,20 @@ Rails.application.routes.draw do
 
   resources :products do
   end
-  # resources :photos do
-  # end
 
-  [:get, :post]
-
+  #photo
   get 'photos' => 'photos#index'
+  get 'photos/index' => 'photos#index'
+  get 'photos/success' => 'photos#success'
+  match 'photos', to: 'photos#upload', via: [:get, :post]
 
-  get 'photos/upload'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'welcome#index'
 
   # Example of regular route:
+  root 'welcome#index'
   get 'welcome/goodbye' => 'welcome#goodbye'
   get 'welcome/index' => 'welcome#index'
 
