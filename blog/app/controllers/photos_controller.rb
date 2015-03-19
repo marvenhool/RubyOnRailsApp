@@ -7,6 +7,11 @@ class PhotosController < ApplicationController
   def success
   end
 
+  def show
+    @photo = Photo.find(params[:id])
+    render ('photos/show')
+  end
+
   def upload
     require 'fileutils' #ruby老版本可尝试改为 require 'ftools'
     tmp = params[:file_upload][:myfile]

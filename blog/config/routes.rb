@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
 
+  # Example of regular route:
+  root 'welcome#index'
+  get 'welcome/goodbye' => 'welcome#goodbye'
+  get 'welcome/index' => 'welcome#index'
+
   resources :articles do
     resources :comments
   end
@@ -8,21 +13,15 @@ Rails.application.routes.draw do
   end
 
   #photo
-  match 'photos', to: 'photos#upload', via: [:get, :post]
-
-  get 'photos' => 'photos#index'
-  get 'photos/index' => 'photos#index'
+  resources :photos do
+  end
+  match 'photos/upload', to: 'photos#upload', via: [:get, :post]
   get 'photos/success' => 'photos#success'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-
-  # Example of regular route:
-  root 'welcome#index'
-  get 'welcome/goodbye' => 'welcome#goodbye'
-  get 'welcome/index' => 'welcome#index'
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase

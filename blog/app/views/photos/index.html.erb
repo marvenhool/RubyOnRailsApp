@@ -3,21 +3,23 @@
 <table class="blogtable">
   <thead>
   <tr>
-    <th style="width: 4%;">ID</th>
-    <th style="width: 20%;">标题</th>
-    <th style="width: 22%;">上传路径</th>
-    <th style="width: 22%;">服务器保存路径</th>
-    <th style="width: 22%;">缩略图</th>
+    <th style="width: 5%;">ID</th>
+    <th style="width: 15%;">标题</th>
+    <th style="width: 20%;">上传路径</th>
+    <th style="width: 10%;">服务器保存路径</th>
+    <th style="width: 20%;">缩略图</th>
+    <th style="width: 20%;">查看</th>
   </tr>
   </thead>
   <tbody>
   <% @photo.each do |photo| %>
       <tr>
-        <td style="width: 4%;"><%= photo.id %></td>
-        <td style="width: 20%;"><%= photo.name %></td>
-        <td style="width: 22%;"><%= photo.path %></td>
-        <td style="width: 22%;"><%= photo.savepath %></td>
-        <td style="width: 22%;"><%= image_tag("/upload/"+photo.name ,:size => "50x50") %></td>
+        <td style="width: 5%;"><%= photo.id %></td>
+        <td style="width: 15%;"><%= photo.name %></td>
+        <td style="width: 20%;"><%= photo.path %></td>
+        <td style="width: 10%;"><%= photo.savepath %></td>
+        <td style="width: 20%;"><%= image_tag("/upload/"+photo.name ,:size => "50x50") %></td>
+        <td style="width: 20%;"><%= link_to '进入', photo_path(photo), :style=>"color:red;" %></td>
       </tr>
   <% end %>
   </tbody>
@@ -25,7 +27,7 @@
 
 <div style ="margin-top: 100px;margin-left: 40px;">
   <h3>上传文件</h3>
-<%= form_for :file_upload, :html =>{:multipart => true} do |f| %>
+<%= form_for :file_upload, :url => { :action => "upload" }, :html =>{:multipart => true} do |f| %>
     <%= f.file_field :myfile %>
     <%= f.submit "Upload" %>
 <% end %>

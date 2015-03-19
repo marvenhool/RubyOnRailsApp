@@ -5,7 +5,7 @@
 
 <div class="div1">
   <h2>正文:</h2>
-  <%= @article.text %>
+  <%= @article.text.html_safe%>
 </div>
 
 <div class="div1"><h4>评论</h4></div>
