@@ -16,8 +16,8 @@
       <tr>
         <td style="width: 5%;"><%= photo.id %></td>
         <td style="width: 15%;"><%= photo.name %></td>
-        <td style="width: 20%;"><%= photo.path %></td>
-        <td style="width: 10%;"><%= photo.savepath %></td>
+        <td style="width: 20%;"><%= photo.path[0, 30] %></td>
+        <td style="width: 10%;"><%= photo.savepath[0, 30] %></td>
         <td style="width: 20%;"><%= image_tag("/upload/"+photo.name ,:size => "50x50") %></td>
         <td style="width: 20%;"><%= link_to '进入', photo_path(photo), :style=>"color:red;" %></td>
       </tr>
