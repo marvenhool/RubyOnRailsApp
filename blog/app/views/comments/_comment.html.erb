@@ -6,7 +6,7 @@
 </p>
 <br/>
 <p>
-  <%= comment.body %>　&nbsp; &nbsp;
+  <%= comment.body.html_safe %>　&nbsp; &nbsp;
   <%= link_to '删除', [comment.article, comment],
               :style=>"color:red;",
               method: :delete,
