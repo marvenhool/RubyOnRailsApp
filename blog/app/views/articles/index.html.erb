@@ -1,8 +1,8 @@
-<div style ="margin-top: 100px;margin-left: 30px;">
+<div style ="margin-top: 100px;margin-left: 30px;"  ng-app="appRoot">
   <%= label_tag :name, "名前" %>
   <%= text_field_tag :name, "", "ng-model" => "name" %>
-</div>
 <p style ="margin-top: 30px;margin-left: 30px;">こんにちは、「{{name}}」さん。</p>
+</div>
 
 <div class="div1"><h1>所有文章</h1></div>
 
@@ -40,12 +40,10 @@
         angular.module('appRoot', []);
         $(document).on('page:load', function() {
             return $('[ng-app]').each(function() {
-                var module;
-                module = $(this).attr('ng-app');
-                return angular.bootstrap(this, [module]);
+                 var module = $(this).attr('ng-app');
+                 return angular.bootstrap(this, [module]);
             });
         });
-
     }).call(this);
 </script>
 <!-- angular code here start  -->
