@@ -1,7 +1,7 @@
 <%= form_for([@article, @article.comments.build]) do |f| %>
     <div style="margin-left: 30px; margin-top: 10px;">
       <%= f.label :commenter %><br>
-      <%= f.text_field :commenter, size: "50x10" %>
+      <%= f.text_field :commenter, size: "50" %>
     </div>
     <div style="margin-left: 30px; margin-top: 10px;">
       <%= f.label :body %><br>

@@ -38,6 +38,7 @@
 <script type="text/javascript">
     var app = angular.module("articleEdit", []);
     app.controller("articleEditController", function($scope) {
-        $scope.articleText = "DDDDDDDDDDDDDDDDDD";
+        $scope.articleText = $("#article_text").text(); //Jqueryでidがarticle_textである元素のテキスト値を戻し。
+        //そしてangularJSのモデル値に設定
     });
 </script>
