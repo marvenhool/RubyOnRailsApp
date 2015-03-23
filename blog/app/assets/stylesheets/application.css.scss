@@ -26,17 +26,34 @@ body{
     padding-bottom:20px;
 }
 
+//========================naviBar=======================
 div.navbar-inner{
   margin-top: 15px;
 }
-
 a.home{
   color: #d0e9c6;
   font-size: large;
   margin-left: 30px;
 }
 
+//========================naviBar=======================
 
+//========================Body=======================
+div#main_box{
+  margin: 0 auto;
+  margin-top: 80px;
+  width: 70%;
+}
+div#side_box{
+}
+div#content_box{
+  border-bottom: 1px solid #999;
+  margin-top: 28px;
+}
+//========================Body=======================
+
+
+//========================Table=======================
 
 table.blogtable{
     padding: 0px;
@@ -45,7 +62,6 @@ table.blogtable{
     margin: 10px 5px 3px 10px;;
     border-collapse: collapse;
 }
-
 table th{
     padding-left: 10px;
     height: 40px;
@@ -58,16 +74,26 @@ table td{
     border: 1px solid #101010;
 }
 
-button.button1 {
-    margin-left: 30px;
-    margin-top: 20px;
+//========================Table=======================
+
+//========================article=======================
+
+div.article_title{
+   margin-top: 20px;
+  font-family: Arial, sans-serif;
+  color: #369;
+  padding-bottom: 4px;
+  border-bottom: 1px solid #999;
+ }
+
+div.article_content{
+  margin-left: 30px;
+  margin-top: 20px;
+  font-family: Arial, sans-serif;
 }
 
-div.div1 {
-    margin-left: 30px;
-    margin-top: 20px;
+div.article_foot{
+  margin-top: 20px;
+  font-family: Arial, sans-serif;
 }
-
-button#button3{
-    margin-left: 10px;
-}
+//========================article=======================

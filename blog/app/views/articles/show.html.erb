@@ -1,18 +1,17 @@
-<div style ="margin-top: 100px;margin-left: 30px;">
-  <h2>标题:</h2>
-  <%= @article.title %>
+<div id="main_box">
+<div style ="text-align: center">
+  <h2><%= @article.title %></h2>
 </div>
 
-<div class="div1">
-  <h2>正文:</h2>
+<div>
   <%= @article.text.html_safe%>
 </div>
 
-<div class="div1"><h4>评论</h4></div>
+<div class="comments" style="margin-top: 30px;margin-bottom: 30px;">
+<div><h3>コメント</h3></div>
 <%= render @article.comments %>
-
-<div class="div1"><h4>添加评论:</h4></div>
 <%= render "comments/form" %>
-
-<button class="button1"><%= link_to '返回', articles_path %></button>
-<button class="button1"><%= link_to '编辑博文', edit_article_path(@article) %></button>
+</div>
+<button><%= link_to '戻る', articles_path %></button>
+<button><%= link_to '文章編集', edit_article_path(@article) %></button>
+</div>

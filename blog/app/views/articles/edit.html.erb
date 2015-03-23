@@ -1,5 +1,7 @@
-<div style ="margin-top: 100px;margin-left: 30px;"><h1>编辑博文</h1></div>
-<div class="div1" ng-app ="articleEdit" ng-controller ="articleEditController">
+
+<div id="main_box">
+<div style="text-align: left"><h2>文章の編集</h2></div>
+<div ng-app ="articleEdit" ng-controller ="articleEditController">
   <%= form_for @article do |f| %>
       <% if @article.errors.any? %>
           <div id="error_explanation">
@@ -16,23 +18,24 @@
         <%= f.label :title %><br>
         <%= f.text_field :title , size: "40x12"%>
       </div>
-      <div style="margin-top: 20px;"><h2>文章预览</h2></div>
+      <div style="margin-top: 20px;"><h2>文章一覧</h2></div>
       <div style="margin-top: 5px;">
         <p>{{articleText}}</p>
       </div>
 
       <div>
         <%= f.label :text %><br>
-        <%= f.text_area :text, size: "80x1","ng-model" => "articleText" %>
+        <%= f.text_area :text, size: "80x15","ng-model" => "articleText" %>
       </div>
-      <div style="margin-top: 20px;">
-        <%= f.submit "保存"%>
+      <div style="margin-top: 10px;">
+        <%= f.submit "提出"%>
       </div>
   <% end %>
 </div>
 
-<div class="div1">
-  <button><%= link_to '返回', articles_path %></button>
+<div style ="margin-top: 10px;">
+  <button><%= link_to '戻る', articles_path %></button>
+</div>
 </div>
 
 <script type="text/javascript">

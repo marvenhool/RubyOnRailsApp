@@ -1,14 +1,13 @@
 <%= form_for([@article, @article.comments.build]) do |f| %>
-    <div style="margin-left: 30px; margin-top: 10px;">
-      <%= f.label :commenter %><br>
+    <div>
+      <%= f.label :タイトル %><br>
       <%= f.text_field :commenter, size: "50" %>
     </div>
-    <div style="margin-left: 30px; margin-top: 10px;">
-      <%= f.label :body %><br>
+    <div>
+      <%= f.label :内容 %><br>
       <%= f.text_area :body , size: "60x5"%>
     </div>
-    <div style="margin-left: 30px; margin-top: 20px;">
-      <%= f.submit "提交"%>
+    <div style="margin-top: 10px;">
+      <%= f.submit "確定"%>
     </div>
-
 <% end %>
