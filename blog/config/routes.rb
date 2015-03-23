@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   # Example of regular route:
   root 'welcome#index'
-  get 'welcome/goodbye' => 'welcome#goodbye'
+  get 'welcome/aboutme' => 'welcome#aboutme'
   get 'welcome/index' => 'welcome#index'
 
   resources :articles do
