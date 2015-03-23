@@ -1,11 +1,16 @@
-<div style ="margin-top: 100px;">
-  <h1 align="center">欢迎来到 marvenhool 的博客世界！</h1>
-  <p align="center">――marvenhool 的博客世界！ </br>是一个基于 Ruby on Rails 的博客系统。</p>
+<div id="main_box">
+ <div class="title"> <h1>パンダ猫のブログ世界！</h1></div>
 
-
-  <div align="center">
-    <%= link_to '进入博客', controller: 'articles' %>
-    <%= link_to '浏览商品', controller: 'products' %>
+ <div id="home_image"  align="center" style="margin-top: 50px;">
+  <%= image_tag("panda1.jpg", :size => "168x100") %>
+  <%= image_tag("panda2.jpg", :size => "168x100") %>
+  <%= image_tag("panda3.jpg", :size => "168x100") %>
+  <%= image_tag("panda4.jpg", :size => "122x100") %>
+ </div>
+  <div  id ="navilink" align="center" style="margin-top: 50px;">
+    <%= link_to 'ブログを見る', controller: 'articles' %>　 &nbsp; &nbsp; | &nbsp; &nbsp;
+    <%= link_to '商品を見る', controller: 'products' %>　 &nbsp; &nbsp; | &nbsp; &nbsp;
+    <%= link_to '写真を見る', controller: 'products' %>　 &nbsp; &nbsp; | &nbsp; &nbsp;
+    <a href="/welcome/goodbye">私について</a>
   </div>
-  <div align="center"><a href="/welcome/goodbye">退出欢迎页</a></div>
 </div>
