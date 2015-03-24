@@ -1,6 +1,5 @@
 <div id="main_box">
  <div class="title"> <h1>パンダ猫のブログ世界！</h1></div>
-
  <div id="home_image"  align="center" style="margin-top: 50px;">
   <%= image_tag("panda1.jpg", :size => "168x100") %>
   <%= image_tag("panda2.jpg", :size => "168x100") %>
@@ -14,3 +13,9 @@
     <a href="/welcome/aboutme">私について</a>
   </div>
 </div>
+
+<textarea id="h01">qeqw</textarea>
+
+<%= link_to "リンク名称", {}, :onclick=> "test(1);return false;" %>
+<input type="hidden" name="authenticity_token" id="authenticity_token" value="<%= form_authenticity_token %>" >
+

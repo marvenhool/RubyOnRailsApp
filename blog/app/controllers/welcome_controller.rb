@@ -3,4 +3,7 @@ class WelcomeController < ApplicationController
   end
   def aboutme
   end
+  def test
+    @article=Article
+  end
 end

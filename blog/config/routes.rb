@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   root 'welcome#index'
   get 'welcome/aboutme' => 'welcome#aboutme'
   get 'welcome/index' => 'welcome#index'
+  match 'welcome/test', to: 'welcome#test', via: [:get, :post]
 
   resources :articles do
     resources :comments
@@ -15,6 +16,7 @@ Rails.application.routes.draw do
   #photo
   resources :photos do
   end
+
   match 'photos/upload', to: 'photos#upload', via: [:get, :post]
   get 'photos/success' => 'photos#success'
 
