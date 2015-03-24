@@ -4,6 +4,11 @@ class WelcomeController < ApplicationController
   def aboutme
   end
   def test
-    @article=Article
+    @article=Article.all
+    if @article.size > 0
+      render
+    else
+      render json: 'no data'
+    end
   end
 end
