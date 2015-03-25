@@ -4,7 +4,8 @@ Rails.application.routes.draw do
   root 'welcome#index'
   get 'welcome/aboutme' => 'welcome#aboutme'
   get 'welcome/index' => 'welcome#index'
-  match 'welcome/test', to: 'welcome#test', via: [:get, :post]
+
+  get 'json_data/article' => 'json_data#article'
 
   resources :articles do
     resources :comments

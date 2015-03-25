@@ -15,19 +15,3 @@
 //= require turbolinks
 //= require angular.min
 //= require ng_app
-
-
-function test(test_id) {
-    $.ajax({
-        url: "/welcome/test/",
-        type: "POST",
-        data: 'test_id=' + test_id + '&authenticity_token=' + $('#authenticity_token').val(),
-        success: function(data) {
-            alert("通信成功しましたよ！");
-            $("#h01").html("gaibianle!")
-        },
-        error: function() {
-            alert("通信エラーが発生しました。時間をおいてもう一度操作をおこなってください。")
-        }
-    })
-}
