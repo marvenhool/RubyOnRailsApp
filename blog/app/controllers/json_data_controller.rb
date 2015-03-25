@@ -4,4 +4,9 @@ class JsonDataController < ApplicationController
     @article = Article.all
     respond_with @article
   end
+
+  def photo
+    @photo=Photo.all
+    respond_with @photo
+  end
 end

@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get 'welcome/index' => 'welcome#index'
 
   get 'json_data/article' => 'json_data#article'
+  get 'json_data/photo' => 'json_data#photo'
 
   resources :articles do
     resources :comments
