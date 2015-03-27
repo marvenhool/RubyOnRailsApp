@@ -1,12 +1,10 @@
 class JsonDataController < ApplicationController
-  respond_to :html, :xml, :json
   def article
     @article = Article.all
-    respond_with @article
+    render json: @article
   end
-
   def photo
     @photo=Photo.all
-    respond_with @photo
+    render xml: @photo
   end
 end
