@@ -13,7 +13,11 @@
   <% @photo.each do |photo| %>
       <div class="photo_item" style ="float: left; margin: 10px;">
         <div><%= image_tag("/upload/"+photo.name ,:size => "400x400") %></div>
-        <div class="image_info"><%= photo.id %> <%= photo.name %> <%= link_to '进入', photo_path(photo), :style=>"color:red;" %></div>
+        <div class="image_info"><%= photo.id %>
+          <%= photo.name %>
+          <%= link_to '見る', photo_path(photo), :style=>"color:red;"%>
+          <%= link_to '削除', photo_path(photo), :style=>"color:red;", method: :delete, data: { confirm: 'Are you sure?' } %>
+        </div>
       </div>
   <% end %>
   </div>

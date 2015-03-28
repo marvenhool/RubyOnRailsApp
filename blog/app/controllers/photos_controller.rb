@@ -15,6 +15,12 @@ class PhotosController < ApplicationController
     render ('photos/show')
   end
 
+  def destroy
+    @photo = Photo.find(params[:id])
+    @photo.destroy
+    redirect_to photos_path
+  end
+
   def upload
     require 'fileutils' #ruby老版本可尝试改为 require 'ftools'
     tmp = params[:file_upload][:myfile]
