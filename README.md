@@ -2,17 +2,29 @@
 this is a test rails 4.x blog demo for rails 
 
 
-rails :4.x
-ruby: 2.1
-sqlite3
+実行環境：
+
+MVCフレームワーク：rails :4.x
+
+言語：ruby: 2.1
+
+データベース：sqlite3
+
 IDE:rubyMine
 
 
-just a practice demo  for learning and experience the new features of rails 4
+
+本プローグラームはパーソナルブログのようなものです。
 
 
-���ݎ��������@�\
-�P�A���L�𔭕\�A�R�����g�ǉ�
-�Q�A�ʐ^���A�v���[�h�A�\��
-�R�AAngularJS�𓱓�
-�S�A�f�[�^�x�[�X�ɂ���f�[�^��API�Ŏ擾���邱�ƂɂȂ�܂����B
+現在実現した機能：
+
+１、日記を発表、コメント追加
+
+２、写真をアプロード、表示
+
+３、AngularJSを導入
+
+４、データベースにあるデータをAPIで取得することになりました。
+
+他の機能次々更新中……
